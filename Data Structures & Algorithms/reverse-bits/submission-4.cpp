@@ -1,0 +1,12 @@
+class Solution {
+public:
+    uint32_t reverseBits(uint32_t n) {
+        uint32_t result = 0;
+        for (int i=0; i<32; i++) {
+            bool bit = n & (1 << i);
+            // printf("%d\n", bit);
+            result |= (bit << 31 - i);
+        }
+        return result;
+    }
+};
